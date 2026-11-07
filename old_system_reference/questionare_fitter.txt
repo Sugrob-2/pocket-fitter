@@ -1,0 +1,84 @@
+for a reference, these are the questions being asked already in existing pure text simple questionary system, which already has a semi well working recommendation and blackbox private backend "What's your age?
+40
+20s30s40s50s60s70+
+
+As we age, swing speeds and overall distances tend to drop. To counter this, there are certain equipment choices that can be made to mitigate the impact of age on your golf game. Also, if you're 70+ and driving it 300 yards, we want to be able to identify you as an absolute legend
+What is your sex?
+Male
+Female
+
+Your sex is important when choosing heads and shafts. It helps optimizing club weight and shot trajectory to fit your specific needs which is essential for you to get the best performance out of your clubs.
+How many rounds do you play per year?
+Under 1010-3031-50Over 50
+
+How often you play helps us understand your commitment level and what type of equipment will serve you best. More frequent players may benefit from different clubhead designs and shaft options.
+
+What do you typically score for 18 holes?
+    Under 7171-7778-8485-92Over 92
+    
+    Your average score gives us a strong indication of your overall ability. This helps us recommend the right balance of forgiveness, workability, and feel in your irons.
+- What is your 7-iron swing speed?
+
+Unsure?
+mph
+km/h
+Under 6060-7071-8081-90Over 90
+
+mph
+
+Swing speed is a key factor in determining the right shaft flex and clubhead design. If you have access to a launch monitor, this is one of the most valuable data points for fitting.
+
+- Select your top 3 desired iron characteristics
+Forgiveness
+Distance
+Forged feel
+Distance control
+Workability
+Less offset
+More offset
+
+In an ideal world, what three things do you want your irons to do based on your game needs? Which characteristics of an iron gives you the most confidence on the course? The Takomo iron lineup is well rounded — there's a model that can match almost any set of desired outcomes and 
+- What is your desired ball flight?
+LowMediumHigh
+
+Different shaft models promote different ball flight. The desired ball flight helps choosing the correct shaft characteristics that would promote the desired result.
+-
+How would you define your swing tempo?
+SmoothModerateQuick
+
+Swing tempo influences the ideal shaft flex and weight. A smooth tempo pairs well with a softer flex, while a quick tempo benefits from a stiffer, more responsive shaft.
+
+- How tall are you?
+ft / in
+cm
+ft
+in
+
+Whether you're a short king or a giant, we don't care, but your clubs do. Your height can dramatically impact the ideal length and lie angle of your club heads. The correct length and lie angle ensures that the club face is straight when you make contact with the ball.
+
+- 
+What is your wrist-to-floor measurement with golf shoes on?
+ft / in
+cm
+ft
+in
+Height 	Men's wrist-to-floor avg.
+< 5'1" 	< 2'7"
+5'1" - 5'3" 	2'6" - 2'8"
+5'3" - 5'6" 	2'7" - 2'10"
+5'7" - 6'0" 	2'9" - 3'0"
+6'0" - 6'3" 	2'10" - 3'2"
+6'4" - 6'5" 	3'1" - 3'3"
+> 6'6" 	> 3'2"
+- What is your glove size?
+XSSMM/LLXL
+
+Your glove size determines the ideal grip size. A properly fitted grip ensures the right amount of hand pressure and control, which directly impacts your shot consistency and comfort.
+-
+Are you right or left handed?
+Left
+Right
+
+This determines whether you need right-handed or left-handed clubs. Right-handed golfers swing from the right side, and vice versa.
+
+-"
