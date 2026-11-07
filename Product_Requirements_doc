@@ -1,0 +1,67 @@
+What Should the System Improve?
+
+The objective is to improve the quality and trustworthiness of the fitting recommendation, not simply collect more data.
+
+1. Better Head Selection
+
+Determine:
+
+Forgiveness requirement
+Launch assistance requirement
+Typical miss tendency (slice, hook, push, pull)
+
+Outcome: More appropriate iron/head category selection.
+
+2. Better Shaft Selection
+
+Determine:
+
+Estimated clubhead speed
+Swing tempo
+Transition aggressiveness
+Release timing (if feasible)
+
+Outcome: More accurate shaft flex, weight, and profile recommendation.
+
+3. Better Lie & Length Recommendation
+
+Refine:
+
+Height
+Wrist-to-floor
+Setup posture
+
+Outcome: Improved lie angle and club length recommendations.
+
+4. Confidence & Transparency
+
+For every recommendation provide:
+
+Confidence score
+Evidence used
+Alternative viable options
+
+Outcome: Increased user trust.
+
+5. Eliminate Poor Fits
+
+Instead of finding one "perfect" club:
+
+Exclude clearly unsuitable heads
+Exclude unsuitable shaft categories
+Explain why
+
+Outcome: Narrow the solution space to a set of valid options rather than a single unexplained recommendation.
+
+Required Outputs
+
+The fitting system should produce:
+
+Category	Output
+Player Profile	Forgiveness need, launch need, miss tendency
+Swing Profile	Speed, tempo, transition, release
+Physical Profile	Height, wrist-to-floor, hand size, posture
+Recommendation Quality	Confidence, alternatives, eliminated options, reasoning
+Key Requirement
+
+The system should help golfers understand why a recommendation was made and why other options were excluded, not just recommend a club.
