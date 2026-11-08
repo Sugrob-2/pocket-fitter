@@ -1,71 +1,76 @@
 # Pocket Fitter
 
-A local-first research prototype for exploring a Takomo iron shortlist. This is not professional fitting advice, a live product catalog, or a promise of improved performance.
+A video first golf club fitting prototype for exploring a Takomo iron shortlist. The app uses a swing video, simple follow-up questions, and clear explanations to help the player compare two starting models. This is a research prototype, not professional fitting advice or a live inventory system.
 
 ## Run it on Windows
 
-1. Install the current Node.js LTS release from [nodejs.org](https://nodejs.org/) (the installer also installs npm). Restart VS Code after installation.
+1. Install the current Node.js LTS release from [nodejs.org](https://nodejs.org/).
 2. Open this project folder in VS Code.
-3. Open **Terminal → New Terminal**, then enter:
+3. Open a terminal and run:
 
    ```powershell
-   node --version
-   npm --version
    npm install
    npm run dev
    ```
 
-4. Open the local address printed by Vite (usually `http://localhost:5173`). Keep the terminal open while using the app. Press `Ctrl+C` in that terminal to stop it.
+4. Open the local address printed by Vite, usually `http://localhost:5173`.
 
-If `node --version` says the command is not recognized, restart VS Code (or Windows) after installing Node.js. No API key or account is required.
+No API key or account is required. The first video analysis loads the MediaPipe model and runtime from the internet.
 
-## What works in this prototype
+## Current fitting flow
 
-- English/Finnish responsive questionnaire, including unknown/optional answers.
-- Provisional, explainable comparison of three dated Takomo reference entries. Prices, shafts, exact build combinations and current availability are intentionally not guessed.
-- CSV shot import with header preview-by-convention, dot decimals with comma separators, and comma decimals with semicolon separators; JSON session import/export.
-- Carry summary (mean, median, range, population standard deviation), shot-by-shot view, and sample session. All shots stay included by default; no lateral plot is invented.
-- Downloadable session, report, and range-test plan.
-- Optional local-video analysis of a user-selected time segment, sampled at up to 20 frames per second (maximum 120 frames). It draws visible body joints and wrist trails with an overlay aligned to the video. The relative wrist-motion estimate is in shoulder-widths per second in the image plane—not clubhead speed. It requires internet on first use to fetch Google's model/WASM assets. Processing runs in the browser; the app does not upload or persist the video. This is experimental.
+- Choose the club you want to film.
+- Enter standing height in feet and inches.
+- Upload one swing video.
+- Select the downswing segment, from the moment the club starts moving down through the follow-through.
+- Analyze the video in the browser.
+- Answer questions one at a time. The video stays available beside the questions and can be hidden.
+- See which measurements relate to each answer and why that answer matters for the fitting.
+- Compare the final two Takomo models. Selecting a model plays the short product video and then opens its official product page automatically.
 
-## Data and limitations
+## Video analysis
 
-### Height-aware video results and Excel
+The analyzer samples the selected video segment and draws visible body landmarks over the video. It can estimate posture, torso lean, body scale, wrist height, and relative wrist movement in the image plane.
 
-Enter standing height in centimetres in the questionnaire or beside the video. Analyze a short clip with the full body visible, then scrub the player or use **Inspect sampled frame**. The overlay shows entered standing height separately from approximate pose height: bending lowers the latter instead of changing the entered height.
+The movement estimate is not clubhead speed. The video cannot independently prove clubhead speed, ball flight, pressure, dynamic lie, or calibrated three dimensional measurements. Entered height supplies the reference scale for body estimates; the video does not independently measure a person's true height.
 
-The results table includes 17 metrics: illustrative pose height, torso lean, left/right knee, hip and elbow angles, shoulder/hip line tilt, ankle separation, wrist heights, and shoulder-relative wrist speeds. Each metric shows the current frame, mean, minimum, maximum, and valid sample count. Angles are 2D projections, not 3D joint rotations. Missing/low-confidence joints remain unavailable. Left/right refer to model body sides; mirrored recordings can reverse them.
+Use a stationary camera, good light, and a view where the full body, hands, and club remain visible. Low confidence or missing measurements are shown as unavailable. Video processing runs in the browser and the selected video is not uploaded by this prototype.
 
-Centimetres and m/s use an **illustrative, uncalibrated scale**: the median visible nose–shoulders–hips–knee–ankle chain is assumed to equal 90% of entered standing height. The remaining 10% is an explicit heuristic allowance for missing head/foot endpoints, not a validated body-proportion measurement. At least three usable body-chain samples are required. The scale is fixed for the whole segment, so bending does not automatically stretch each frame back to standing height. Pose height is vertical nose-to-ankle span plus the fixed 10% allowance. Camera perspective and body rotation can distort every estimate; use a fixed camera and consistent distance. No clubhead speed, ball flight, pressure, or calibrated 3D measurement is inferred. Slow-motion video speeds refer to clip time, not original real-world capture time.
+## Product data and recommendations
 
-**Copy summary for Excel** or **Copy all frames** → open Excel → select A1 → Ctrl+V. If clipboard access is blocked, a selectable text box appears. **Download summary CSV** and **Download all frames CSV** save UTF-8 semicolon-separated files (not .xlsx). Choose decimal commas if your Excel uses them. If necessary, import through Excel **Data → From Text/CSV**, selecting UTF-8 and semicolon delimiter. Reports include entered height, clip name, sample counts, partial/cancelled status, units, and method notes. Empty cells mean unavailable, not zero. Video reports are separate from questionnaire/session JSON exports; export before resetting or leaving the results screen.
+The product comparison uses a dated Takomo reference catalog stored in `src/data/takomo-products.json`. Recommendations are provisional and explainable. They do not claim current stock, price, exact build compatibility, or guaranteed performance.
 
-Geometry accounts for the video's width/height ratio. Wrist speeds compare consecutive visible frames no more than 0.2 seconds apart relative to the shoulder midpoint, using one median shoulder width for the segment. Long clips sampled at the 120-frame cap may have no usable speed intervals; choose a shorter segment. Wrist trails do not bridge missing detections. Maximum speeds can include tracking noise. Summary means are arithmetic means of valid sampled values, not time-weighted measurements.
+Product cards link to official Takomo product pages. The purchase handoff video is stored at `public/golf-swing5000.mp4`.
 
-Calculation/export regression checks (Node.js 22.18+): `node --test tests/videoMetrics.test.mjs`. Production build on Windows: `npm.cmd run build`.
+A future backend connected language model can explain missing information, compare the final models, and choose useful follow-up questions. See [FUTURE_LLM_FOLLOW_UP.md](FUTURE_LLM_FOLLOW_UP.md).
 
-The dated research document `Golf_Club_Fitting_Research_2026-11-07.md` was not present in the supplied project or Downloads folder when implementation began. The sample values and three model positioning/7-iron reference values come from Appendix A in the supplied prompt; they are labeled reference/demo data. The supplied YouTube clip was not independently inspected and is not connected to the sample TrackMan session.
+## Stable GitHub version
 
-The shortlist rules are deterministic, provisional catalog-positioning heuristics (`CATALOG_POSITIONING_V1`, `USER_PRIORITY_V1`), not validated fitting science. The static measurements do not determine exact length or lie. No shaft, grip, purchase eligibility, inventory, or score/probability is generated. Unknown product availability is not treated as in stock.
+The current stable release is tagged `v1.0.0-pocket-fitter`. Future work can continue on `master` without changing that tag.
 
-Sessions live in application memory until you download them; there is no account or remote database. Video object URLs are released when the session is reset or a different clip is selected. JSON files retain schema version, original-unit field names, source/provenance and unknowns.
+Clone the stable branch:
 
-## CSV format
+```bash
+git clone --branch stable/pocket-fitter-v1.0.0 https://github.com/Sugrob-2/pocket-fitter.git
+```
 
-Download `pocket-fitter-sample.csv` from inside the app. Recognized columns are `shot_id`, `club`, `club_speed_mph`, `ball_speed_mph`, `smash_factor`, `carry_m`, `total_m`, `height_m`, `spin_rpm`, `launch_deg`, `landing_deg`, `attack_deg`, and `lateral_m`. `carry_m` is required. Missing optional values remain unknown. Semicolon files may use decimal commas (for example `158,5`); ambiguous formats are not silently inferred.
+Or download the tagged archive:
 
-## Modules
+[Download the stable release](https://github.com/Sugrob-2/pocket-fitter/archive/refs/tags/v1.0.0-pocket-fitter.zip)
 
-- `src/domain.ts` — contracts, Zod import schema, reference catalog, CSV parsing, statistics, provisional rules.
-- `src/i18n.ts` — separate English/Finnish strings.
-- `src/main.tsx` — guided flow, data import/export, results and MediaPipe adapter.
-- `src/SwingVideoAnalyzer.tsx` — segment sampling, synchronized overlay, height-aware metrics UI and Excel copy/CSV export.
-- `src/videoMetrics.ts` — aspect-corrected geometry, illustrative body scale, motion metrics, missing-data handling and spreadsheet-safe export.
-- `src/videoMetrics.css` — responsive results table and frame controls.
-- `src/style.css` — responsive interface.
+## Main modules
 
-Video model: MediaPipe Pose Landmarker Lite, loaded from Google's official model storage; browser runtime from jsDelivr package `@mediapipe/tasks-vision` (Apache-2.0). First-use network access is needed. The analyzer reports 2D pose geometry and relative wrist movement, with optional illustrative physical-unit estimates described above. It cannot measure clubhead speed, ball flight, or calibrated 3D motion. Automatic swing-phase detection, sensor support and LLM explanation are deferred.
+- `src/main3.tsx` — the active video first fitting flow, questions, product shortlist, and purchase handoff.
+- `src/SwingVideoAnalyzer.tsx` — video upload, segment selection, pose sampling, and automatic frame focus.
+- `src/videoMetrics.ts` — aspect corrected pose geometry and illustrative body measurements.
+- `src/takomo-theme.css` — Takomo inspired colors and product presentation.
+- `src/data/takomo-products.json` — reference product catalog used by the recommendation rules.
+- `src/fitting.ts` — deterministic provisional recommendation rules.
 
-## Demo script
+## Build
 
-Open the app → choose **Explore sample session** → review the nine 6-iron carries (including shot 8) → compare the three reference models → download the session or range plan → optionally choose a local video, set the start/end of a short swing segment, and analyze it. The overlay shows detected joints and wrist trails; its relative motion value is not club speed. On the home screen, **Start without measurements** demonstrates that no video or launch monitor is required.
+For a production build on Windows:
+
+```powershell
+npm.cmd run build
+```
