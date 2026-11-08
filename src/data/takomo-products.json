@@ -1,0 +1,1016 @@
+{
+  "meta": {
+    "name": "Takomo Golf iron product data — Since AI Hackathon 2026",
+    "as_of": "2026-10-13",
+    "notes": [
+      "Ratings (distance, forgiveness, workability, distance_control, feel, offset_rating) are Takomo's own relative scales, not measured values.",
+      "Shaft flight_profile and tempo_profile list every bucket the shaft is considered suitable for. tempo_profile null means any tempo.",
+      "flight_profile is the shaft's launch and spin character (low, mid, high) relative to the other shafts. Actual launch and spin numbers vary per golfer, so no fixed numbers are given.",
+      "Each flex of a shaft model is its own record. Some KBS models exist twice (MKII build and 301 build) with slightly different profiles.",
+      "Every head is available with every grip, length and lie option."
+    ]
+  },
+  "flex_codes": {
+    "lady": "L (ladies)",
+    "senior": "A (senior)",
+    "regular": "R (regular)",
+    "stiff": "S (stiff)",
+    "x-stiff": "X (extra stiff)"
+  },
+  "heads": [
+    {
+      "slug": "101-mkii",
+      "name": "Iron 101 MKII",
+      "description": "Forgiveness and distance in the world's sleekest package",
+      "seven_iron_loft_deg": 29.0,
+      "seven_iron_offset_mm": 3.4,
+      "target_score_bucket": 5,
+      "target_score_label": "Over 92",
+      "ratings": {
+        "distance": 5,
+        "forgiveness": 5,
+        "workability": 2,
+        "distance_control": 2,
+        "feel": 0,
+        "offset": 5
+      },
+      "stock_shafts": [
+        "KBS Tour",
+        "KBS Tour Lite"
+      ],
+      "default_shaft": "kbs-tour-regular"
+    },
+    {
+      "slug": "201-mkii",
+      "name": "Iron 201 MKII",
+      "description": "Perfect blend of distance, forgiveness and workability",
+      "seven_iron_loft_deg": 31.0,
+      "seven_iron_offset_mm": 2.77,
+      "target_score_bucket": 4,
+      "target_score_label": "85-92",
+      "ratings": {
+        "distance": 4,
+        "forgiveness": 4,
+        "workability": 3,
+        "distance_control": 3,
+        "feel": 0,
+        "offset": 3
+      },
+      "stock_shafts": [
+        "KBS Tour",
+        "KBS Tour Lite"
+      ],
+      "default_shaft": "kbs-tour-regular"
+    },
+    {
+      "slug": "201t-mkii",
+      "name": "Iron 201T MKII",
+      "description": "Increased workability for players who need a hint of forgiveness",
+      "seven_iron_loft_deg": 33.0,
+      "seven_iron_offset_mm": 2.46,
+      "target_score_bucket": 3,
+      "target_score_label": "78-84",
+      "ratings": {
+        "distance": 3,
+        "forgiveness": 3,
+        "workability": 4,
+        "distance_control": 4,
+        "feel": 1,
+        "offset": 2
+      },
+      "stock_shafts": [
+        "KBS Tour",
+        "KBS Tour Lite"
+      ],
+      "default_shaft": "kbs-tour-regular"
+    },
+    {
+      "slug": "301-cb",
+      "name": "Iron 301 CB",
+      "description": "A forged, cavity back iron, that balances control and forgiveness",
+      "seven_iron_loft_deg": 34.0,
+      "seven_iron_offset_mm": 1.8,
+      "target_score_bucket": 2,
+      "target_score_label": "71-77",
+      "ratings": {
+        "distance": 1,
+        "forgiveness": 2,
+        "workability": 5,
+        "distance_control": 5,
+        "feel": 2,
+        "offset": 0
+      },
+      "stock_shafts": [
+        "KBS Tour",
+        "KBS Tour Lite"
+      ],
+      "default_shaft": "kbs-tour-regular-301"
+    },
+    {
+      "slug": "301-mb",
+      "name": "Iron 301 MB",
+      "description": "A forged, muscle back iron that enables maximum workability and feel",
+      "seven_iron_loft_deg": 34.0,
+      "seven_iron_offset_mm": 1.8,
+      "target_score_bucket": 1,
+      "target_score_label": "Under 71",
+      "ratings": {
+        "distance": 1,
+        "forgiveness": 1,
+        "workability": 5,
+        "distance_control": 5,
+        "feel": 2,
+        "offset": 0
+      },
+      "stock_shafts": [
+        "KBS Tour",
+        "KBS Tour Lite"
+      ],
+      "default_shaft": "kbs-tour-regular-301"
+    }
+  ],
+  "shafts": [
+    {
+      "slug": "kbs-tour-regular",
+      "model": "KBS Tour",
+      "build": "MKII",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "regular",
+      "weight_g": 120,
+      "tempo_profile": [
+        "mid",
+        "fast"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "kbs-tour-stiff",
+      "model": "KBS Tour",
+      "build": "MKII",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "stiff",
+      "weight_g": 130,
+      "tempo_profile": [
+        "mid",
+        "fast"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "kbs-tour-x-stiff",
+      "model": "KBS Tour",
+      "build": "MKII",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "x-stiff",
+      "weight_g": 133,
+      "tempo_profile": [
+        "mid",
+        "fast"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "kbs-tour-regular-301",
+      "model": "KBS Tour",
+      "build": "301",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "regular",
+      "weight_g": 120,
+      "tempo_profile": [
+        "slow",
+        "mid"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-tour-stiff-301",
+      "model": "KBS Tour",
+      "build": "301",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "stiff",
+      "weight_g": 130,
+      "tempo_profile": [
+        "slow",
+        "mid"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-tour-x-stiff-301",
+      "model": "KBS Tour",
+      "build": "301",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "x-stiff",
+      "weight_g": 133,
+      "tempo_profile": [
+        "slow",
+        "mid"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-tour-lite-regular",
+      "model": "KBS Tour Lite",
+      "build": "MKII",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "regular",
+      "weight_g": 105,
+      "tempo_profile": [
+        "slow"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "kbs-tour-lite-stiff",
+      "model": "KBS Tour Lite",
+      "build": "MKII",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "stiff",
+      "weight_g": 105,
+      "tempo_profile": [
+        "slow"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "kbs-tour-lite-x-stiff",
+      "model": "KBS Tour Lite",
+      "build": "MKII",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "x-stiff",
+      "weight_g": 110,
+      "tempo_profile": [
+        "slow"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "kbs-tour-lite-regular-301",
+      "model": "KBS Tour Lite",
+      "build": "301",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "regular",
+      "weight_g": 105,
+      "tempo_profile": [
+        "slow",
+        "mid"
+      ],
+      "flight_profile": [
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-tour-lite-stiff-301",
+      "model": "KBS Tour Lite",
+      "build": "301",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "stiff",
+      "weight_g": 105,
+      "tempo_profile": [
+        "slow",
+        "mid"
+      ],
+      "flight_profile": [
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-tour-lite-x-stiff-301",
+      "model": "KBS Tour Lite",
+      "build": "301",
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "x-stiff",
+      "weight_g": 110,
+      "tempo_profile": [
+        "slow",
+        "mid"
+      ],
+      "flight_profile": [
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-c-taper-regular",
+      "model": "KBS C-Taper",
+      "build": null,
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "regular",
+      "weight_g": 125,
+      "tempo_profile": [
+        "fast"
+      ],
+      "flight_profile": [
+        "low"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-c-taper-stiff",
+      "model": "KBS C-Taper",
+      "build": null,
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "stiff",
+      "weight_g": 135,
+      "tempo_profile": [
+        "fast"
+      ],
+      "flight_profile": [
+        "low"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-c-taper-x-stiff",
+      "model": "KBS C-Taper",
+      "build": null,
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "x-stiff",
+      "weight_g": 140,
+      "tempo_profile": [
+        "fast"
+      ],
+      "flight_profile": [
+        "low"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-c-taper-lite-regular",
+      "model": "KBS C-Taper Lite",
+      "build": null,
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "regular",
+      "weight_g": 109,
+      "tempo_profile": [
+        "fast"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-c-taper-lite-stiff",
+      "model": "KBS C-Taper Lite",
+      "build": null,
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "stiff",
+      "weight_g": 119,
+      "tempo_profile": [
+        "fast"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "kbs-c-taper-lite-x-stiff",
+      "model": "KBS C-Taper Lite",
+      "build": null,
+      "manufacturer": "KBS",
+      "material": "steel",
+      "flex": "x-stiff",
+      "weight_g": 125,
+      "tempo_profile": [
+        "fast"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "mitsubishi-mmt-50-l",
+      "model": "Mitsubishi MMT",
+      "build": null,
+      "manufacturer": "Mitsubishi",
+      "material": "graphite",
+      "flex": "lady",
+      "weight_g": 57,
+      "tempo_profile": [
+        "mid",
+        "fast"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "mitsubishi-mmt-60-a",
+      "model": "Mitsubishi MMT",
+      "build": null,
+      "manufacturer": "Mitsubishi",
+      "material": "graphite",
+      "flex": "senior",
+      "weight_g": 62,
+      "tempo_profile": [
+        "mid",
+        "fast"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "mitsubishi-mmt-70-r",
+      "model": "Mitsubishi MMT",
+      "build": null,
+      "manufacturer": "Mitsubishi",
+      "material": "graphite",
+      "flex": "regular",
+      "weight_g": 73,
+      "tempo_profile": [
+        "mid",
+        "fast"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "mitsubishi-mmt-80-s",
+      "model": "Mitsubishi MMT",
+      "build": null,
+      "manufacturer": "Mitsubishi",
+      "material": "graphite",
+      "flex": "stiff",
+      "weight_g": 86,
+      "tempo_profile": [
+        "mid",
+        "fast"
+      ],
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "true-temper-denali-silver-40g-4-0",
+      "model": "True Temper Denali Silver",
+      "build": null,
+      "manufacturer": "True Temper",
+      "material": "graphite",
+      "flex": "lady",
+      "weight_g": 53,
+      "tempo_profile": [
+        "slow"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "true-temper-denali-silver-50g-5-0",
+      "model": "True Temper Denali Silver",
+      "build": null,
+      "manufacturer": "True Temper",
+      "material": "graphite",
+      "flex": "senior",
+      "weight_g": 58,
+      "tempo_profile": [
+        "slow"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "true-temper-denali-silver-60g-5-5",
+      "model": "True Temper Denali Silver",
+      "build": null,
+      "manufacturer": "True Temper",
+      "material": "graphite",
+      "flex": "regular",
+      "weight_g": 77,
+      "tempo_profile": [
+        "slow"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "true-temper-denali-silver-70g-6-0",
+      "model": "True Temper Denali Silver",
+      "build": null,
+      "manufacturer": "True Temper",
+      "material": "graphite",
+      "flex": "stiff",
+      "weight_g": 89,
+      "tempo_profile": [
+        "slow"
+      ],
+      "flight_profile": [
+        "mid",
+        "high"
+      ],
+      "heads": [
+        "101-mkii",
+        "201-mkii",
+        "201t-mkii"
+      ]
+    },
+    {
+      "slug": "obsidian-75-a",
+      "model": "Takomo Obsidian",
+      "build": null,
+      "manufacturer": "Takomo",
+      "material": "graphite",
+      "flex": "senior",
+      "weight_g": 72,
+      "tempo_profile": null,
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "obsidian-75-r",
+      "model": "Takomo Obsidian",
+      "build": null,
+      "manufacturer": "Takomo",
+      "material": "graphite",
+      "flex": "regular",
+      "weight_g": 75,
+      "tempo_profile": null,
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "obsidian-95-r",
+      "model": "Takomo Obsidian",
+      "build": null,
+      "manufacturer": "Takomo",
+      "material": "graphite",
+      "flex": "regular",
+      "weight_g": 96,
+      "tempo_profile": null,
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "obsidian-95-s",
+      "model": "Takomo Obsidian",
+      "build": null,
+      "manufacturer": "Takomo",
+      "material": "graphite",
+      "flex": "stiff",
+      "weight_g": 98,
+      "tempo_profile": null,
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "obsidian-115-s",
+      "model": "Takomo Obsidian",
+      "build": null,
+      "manufacturer": "Takomo",
+      "material": "graphite",
+      "flex": "stiff",
+      "weight_g": 110,
+      "tempo_profile": null,
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "obsidian-115-x",
+      "model": "Takomo Obsidian",
+      "build": null,
+      "manufacturer": "Takomo",
+      "material": "graphite",
+      "flex": "x-stiff",
+      "weight_g": 111,
+      "tempo_profile": null,
+      "flight_profile": [
+        "low",
+        "mid"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "fujikura-atmos-red-a",
+      "model": "Fujikura Atmos Red",
+      "build": null,
+      "manufacturer": "Fujikura",
+      "material": "graphite",
+      "flex": "senior",
+      "weight_g": 72,
+      "tempo_profile": null,
+      "flight_profile": [
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "fujikura-atmos-red-r",
+      "model": "Fujikura Atmos Red",
+      "build": null,
+      "manufacturer": "Fujikura",
+      "material": "graphite",
+      "flex": "regular",
+      "weight_g": 72,
+      "tempo_profile": null,
+      "flight_profile": [
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    },
+    {
+      "slug": "fujikura-atmos-red-s",
+      "model": "Fujikura Atmos Red",
+      "build": null,
+      "manufacturer": "Fujikura",
+      "material": "graphite",
+      "flex": "stiff",
+      "weight_g": 72,
+      "tempo_profile": null,
+      "flight_profile": [
+        "high"
+      ],
+      "heads": [
+        "301-cb",
+        "301-mb"
+      ]
+    }
+  ],
+  "grips": [
+    {
+      "slug": "standard",
+      "name": "Standard",
+      "manufacturer": "Lamkin"
+    },
+    {
+      "slug": "midsize",
+      "name": "Midsize",
+      "manufacturer": "Lamkin"
+    },
+    {
+      "slug": "oversize",
+      "name": "Oversize",
+      "manufacturer": "Lamkin"
+    }
+  ],
+  "length_options_in": [
+    -1.5,
+    -1.0,
+    -0.5,
+    0,
+    0.5,
+    1.0,
+    1.5
+  ],
+  "lie_options_deg": [
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ],
+  "lie_sign_convention": "Negative = flat, positive = upright, 0 = standard.",
+  "current_tool_rules": {
+    "note": "Simplified lookup tables from today's questionnaire. A starting point, not a spec.",
+    "score_buckets": {
+      "1": "Under 71",
+      "2": "71-77",
+      "3": "78-84",
+      "4": "85-92",
+      "5": "Over 92"
+    },
+    "swing_buckets": [
+      {
+        "bucket": 1,
+        "seven_iron_speed_mph": "<60",
+        "seven_iron_carry_yd": "<120",
+        "flex": "lady (women) / senior (men)"
+      },
+      {
+        "bucket": 2,
+        "seven_iron_speed_mph": "60-70",
+        "seven_iron_carry_yd": "120-135",
+        "flex": "senior"
+      },
+      {
+        "bucket": 3,
+        "seven_iron_speed_mph": "71-80",
+        "seven_iron_carry_yd": "135-155",
+        "flex": "regular"
+      },
+      {
+        "bucket": 4,
+        "seven_iron_speed_mph": "81-90",
+        "seven_iron_carry_yd": "155-175",
+        "flex": "stiff"
+      },
+      {
+        "bucket": 5,
+        "seven_iron_speed_mph": ">90",
+        "seven_iron_carry_yd": ">175",
+        "flex": "x-stiff"
+      }
+    ],
+    "graphite_if": [
+      "flex is lady or senior",
+      "golfer is female",
+      "age >= 70"
+    ],
+    "tempo_answers": {
+      "1": "smooth -> slow",
+      "2": "moderate -> mid",
+      "3": "quick -> fast"
+    },
+    "flight_answers": {
+      "1": "low",
+      "2": "mid",
+      "3": "high"
+    },
+    "length_by_height_cm": [
+      {
+        "below_cm": 155.5,
+        "length_in": -1.5
+      },
+      {
+        "below_cm": 160.5,
+        "length_in": -1.0
+      },
+      {
+        "below_cm": 168.5,
+        "length_in": -0.5
+      },
+      {
+        "below_cm": 183.5,
+        "length_in": 0
+      },
+      {
+        "below_cm": 191.5,
+        "length_in": 0.5
+      },
+      {
+        "below_cm": 196.5,
+        "length_in": 1.0
+      },
+      {
+        "below_cm": null,
+        "length_in": 1.5
+      }
+    ],
+    "lady_flex_length_adjustment_in": 1.0,
+    "lie_examples": [
+      {
+        "height_cm": 152,
+        "wrist_to_floor_cm": 86,
+        "lie_deg": 1
+      },
+      {
+        "height_cm": 173,
+        "wrist_to_floor_cm": 86,
+        "lie_deg": 0
+      },
+      {
+        "height_cm": 188,
+        "wrist_to_floor_cm": 94,
+        "lie_deg": 2
+      },
+      {
+        "height_cm": 196,
+        "wrist_to_floor_cm": 100,
+        "lie_deg": 3
+      },
+      {
+        "height_cm": 193,
+        "wrist_to_floor_cm": 76,
+        "lie_deg": -2
+      }
+    ],
+    "grip_by_glove_size": {
+      "XS": "standard",
+      "S": "standard",
+      "M": "standard",
+      "M/L": "midsize",
+      "L": "midsize",
+      "XL": "oversize"
+    },
+    "stock_set_requires": [
+      "steel shaft from the head's stock_shafts",
+      "standard length",
+      "standard lie",
+      "standard grip"
+    ],
+    "putter_length_by_height_cm": [
+      {
+        "from_cm": 160,
+        "to_cm": 170,
+        "length_in": 33
+      },
+      {
+        "from_cm": 171,
+        "to_cm": 180,
+        "length_in": 34
+      },
+      {
+        "from_cm": 181,
+        "to_cm": 196,
+        "length_in": 35
+      }
+    ]
+  }
+}

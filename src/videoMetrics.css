@@ -1,0 +1,13 @@
+.swing-analyzer .frame-picker { display: grid; gap: 10px; margin: 18px 0; }
+.swing-analyzer .frame-picker input { width: 100%; }
+.metrics-table-wrap { overflow-x: auto; margin: 20px 0; }
+.metrics-table { border-collapse: collapse; width: 100%; font-size: 12px; text-align: left; }
+.metrics-table caption { text-align: left; padding: 10px 0; font-weight: 600; }
+.metrics-table th, .metrics-table td { padding: 10px; border-bottom: 1px solid #d6d8ce; }
+.metrics-table thead { background: #eef0e7; }
+.metrics-table tbody th { min-width: 200px; font-weight: 400; }
+.metrics-table td { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.metrics-notes { padding: 12px; background: #eef0e7; font-size: 12px; line-height: 1.6; }
+.metrics-notes summary { cursor: pointer; }
+.swing-analyzer .manual-copy { width: 100%; min-height: 150px; font-size: 12px; }
+.swing-analyzer button:disabled, .swing-analyzer input:disabled { opacity: .55; cursor: wait; }
